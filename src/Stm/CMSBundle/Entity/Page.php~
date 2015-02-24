@@ -108,27 +108,4 @@ class Page
         return $this->content;
     }
 
-
-    /**
-     * Set category
-     *
-     * @param \Stm\CMSBundle\Entity\Category $category
-     * @return Page
-     */
-    public function setCategory(\Stm\CMSBundle\Entity\Category $category = null)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \Stm\CMSBundle\Entity\Category 
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
 }
