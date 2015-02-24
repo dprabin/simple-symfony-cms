@@ -9,3 +9,9 @@ stm_cms_homepage:
 login:
 	path: /login
 	defaults: { _controller: StmCMSBundle:Security:login }
+
+login_check:
+	path: /login_check
+
+logout:
+	pattern: /logout
