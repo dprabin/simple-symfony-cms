@@ -1,3 +1,7 @@
+stm_cms_cms_user:
+    resource: "@StmCMSBundle/Resources/config/routing/user.yml"
+    prefix:   /cms/user
+
 stm_cms_homepage:
     path:     /
     defaults: { _controller: StmCMSBundle:Default:index }
