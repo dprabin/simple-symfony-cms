@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData) }}</div>
+        {# The error variable passed into the template is an instance of AuthenticationException. 
+            It may contain more information - or even sensitive information - 
+            about the authentication failure, so use it wisely! 
+        #}
+    {% endif %}
+
+    <form action="{{ path('login_check') }}" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password" />
+
+        {#
+            If you want to control the URL the user
+            is redirected to on success (more details below)
+            <input type="hidden" name="_target_path" value="/account" />
+            but we have already added this to app/config/security.yml file as:
+            firewalls: main: form_login: default_target_path: / 
+            so no need to put this input field here
+        #}
+
+        <button type="submit">login</button>
+    </form>
+{% endblock %}
