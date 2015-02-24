@@ -50,6 +50,14 @@ class Category
         $this->pages = new ArrayCollegtion();
     }
 
+    /*
+     * in inverse relationship entity tostring method needed by symfony 
+     * to create new page in order to populate name of the category that the page belongs to 
+     */
+    public function __toString(){
+        return $this->name;
+    }
+
     /**
      * Get id
      *
