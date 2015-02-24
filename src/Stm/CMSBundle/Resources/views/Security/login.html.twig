@@ -9,6 +9,8 @@
         #}
     {% endif %}
 
+    {# this is not using form builder helper because this is not an object. 
+       Only simple html form works for login #}
     <form action="{{ path('login_check') }}" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="_username" value="{{ last_username }}" />
