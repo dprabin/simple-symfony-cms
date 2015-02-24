@@ -97,27 +97,4 @@ class Page
     {
         return $this->content;
     }
-
-    /**
-     * Set category
-     *
-     * @param string $category
-     * @return Page
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return string 
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
 }
