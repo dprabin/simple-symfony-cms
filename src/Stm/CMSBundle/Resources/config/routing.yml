@@ -5,3 +5,7 @@ stm_cms_cms_user:
 stm_cms_homepage:
     path:     /
     defaults: { _controller: StmCMSBundle:Default:index }
+
+login:
+	path: /login
+	defaults: { _controller: StmCMSBundle:Security:login }
