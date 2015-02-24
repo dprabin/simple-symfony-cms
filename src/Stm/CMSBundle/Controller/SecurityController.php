@@ -8,10 +8,13 @@ use Symfony\Component\Security\Core\SecurityContextInterface;
 
 class SecurityController extends Controller
 {
-	public function loginAction(Request $request)
+	/**
+     * @Route("/login", name="login_route")
+     */
+    public function loginAction(Request $request)
 	{
-		/*** this is for compatibility with symfony earlier version
-		* symfony 2.6 and above support much sleek method to authenticate
+		/*** this code is for older versions of Symfony
+		*  piror to Symfony2.6
 
 		$session = $request->getSession();
 
@@ -28,7 +31,12 @@ class SecurityController extends Controller
 		//Last username entered by the user
 		$lastUsername = (null === $session) ? '' : $session->get(SecurityContextInterface::LAST_USERNAME);
 		*/
-		
+
+		/**
+		 * The security.authentication_utils service and the 
+		 * AuthenticationUtils class were introduced in Symfony 2.6.
+		 * cannot be used in previous version
+		 */
 		$authenticationUtils = $this->get('security.authentication_utils');
 
 		//get the login error if any
@@ -41,6 +49,14 @@ class SecurityController extends Controller
 			'StmCMSBundle:Security:login.html.twig', 
 			array('error' => $error,'last_username' => $lastUsername,)
 		);
+	}
+
+	/**
+	  * @Route("/login_check", name="login_check")
+	  */
+	public function loginCheckAction()
+	{
+
 	}
 }
 
