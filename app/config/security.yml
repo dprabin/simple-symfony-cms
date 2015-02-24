@@ -4,4 +4,9 @@ security:
 		Stm\CMSBundle\Entity\User: bcrypt
 	role_hierarchy:
 		ROLE_ADMIN: [ROLE_USER]
+	providers:
+		chain_provider:
+			chain:
+				providers: [in_memory, user_db]
+
 
