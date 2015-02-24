@@ -15,4 +15,16 @@ security:
 							in_memory:
 		user_db:
 			entity:{  class: StmCMSBundle:User, property: username }
+	firewalls:
+		main:
+			pattern: /.*\
+			form_login:
+				login_path: /login
+				check_path: /login_check
+				default_target_path: /
+			logout:
+				path: /logout
+				target: /
+			security: true
+			annonymous: true
 
