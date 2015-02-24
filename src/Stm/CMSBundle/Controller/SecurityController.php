@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 class SecurityController extends Controller
 {
 	/**
@@ -42,7 +44,7 @@ class SecurityController extends Controller
 		//get the login error if any
 		$error = $authenticationUtils->getLastAuthenticationError();
 		//Last username entered by the user
-		$lastUsername = $authenticationUtils->getLastUsername;
+		$lastUsername = $authenticationUtils->getLastUsername();
 
 		//render the view
 		return $this->render(
