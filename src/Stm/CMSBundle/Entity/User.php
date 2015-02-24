@@ -92,4 +92,18 @@ class User implements UserInterface
     {
         return $this->password;
     }
+
+    /**
+     * We should override some methods in Symfony core security component: UserInterface
+     * in order for it to work properly
+     */
+    public function getSalt(){
+        return null;
+    }
+    public function getRoles(){
+        return array('ROLE_USER');
+    }
+    public function eraseCredentials(){
+
+    }
 }
