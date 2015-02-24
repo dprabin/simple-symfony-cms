@@ -7,11 +7,11 @@ stm_cms_homepage:
     defaults: { _controller: StmCMSBundle:Default:index }
 
 login:
-	path: /login
-	defaults: { _controller: StmCMSBundle:Security:login }
+    path: /login
+    defaults: { _controller: StmCMSBundle:Security:login }
 
 login_check:
-	path: /login_check
+    path: /login_check
 
 logout:
-	pattern: /logout
+    pattern: /logout
