@@ -35,19 +35,16 @@ class Page
      */
     private $content;
 
-    /*
-     * in following ORM\ManyToOne, we define the pages property to be ManyToOne relationship 
+    /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="pages")
+     * in above ORM\ManyToOne, we define the pages property to be ManyToOne relationship 
      * with the category entity as the target entity 
      * mapped by pages property defined at pages entity and category property under
      *
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      * In ORM\JoinColumn, we Define join column: When joined with category table (defined with entity)
      * When we update our schema, new field category_id is added to this page entity
      * referencedColumnName=id signifies field name in referenced entity
-     */
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="pages")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     private $category;
 
