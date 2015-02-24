@@ -3,6 +3,7 @@
 namespace Stm\CMSBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Category
@@ -24,10 +25,14 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=50)
+     * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
 
+
+    /**
+     * @ORM\Column(targetEntity="Page", mapped)
+     */
 
     /**
      * Get id
