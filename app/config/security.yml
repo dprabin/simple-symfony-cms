@@ -27,4 +27,8 @@ security:
 				target: /
 			security: true
 			annonymous: true
+	access_control:
+		- { path: /login, roles: IS_AUTHENTICATED_ANNONYMOUSLY }
+		- { path: /cms/user, roles: ROLE_ADMIN }
+		- { path: /.*, roles: IS_AUTHENTICATED_ANNONYMOUSLY }
 
