@@ -32,6 +32,7 @@ class Category
 
     /**
      * @ORM\OneToMany(targetEntity="Page", mappedBy="category")
+     *
      * here we define the pages property to be one to many relationship 
      * with the Page entity as the target entity 
      * mapped by cateogry property which is defined at pages entity
