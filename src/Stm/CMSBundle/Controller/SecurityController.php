@@ -42,12 +42,12 @@ class SecurityController extends Controller
 		//get the login error if any
 		$error = $authenticationUtils->getLastAuthenticationError();
 		//Last username entered by the user
-		$lastUsername = $authenticationUtils->getLastUsername
+		$lastUsername = $authenticationUtils->getLastUsername;
 
 		//render the view
 		return $this->render(
 			'StmCMSBundle:Security:login.html.twig', 
-			array('error' => $error,'last_username' => $lastUsername,)
+			array('error' => $error,'last_username' => $lastUsername)
 		);
 	}
 
