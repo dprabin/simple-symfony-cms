@@ -1,1 +1,5 @@
 security:
+	encoders:
+		Symfony\Component\Security\Core\User: plaintext
+		Stm\CMSBundle\Entity\User: bcrypt
+
