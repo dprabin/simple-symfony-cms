@@ -4,6 +4,10 @@ namespace Stm\CMSBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+/* 
+ * we will be adding pages property as inverse relationship to category entity
+ * ant this will be many to one so we need ArrayCollecion
+ */
 
 /**
  * Category
