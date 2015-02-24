@@ -36,9 +36,8 @@ class Page
     private $content;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="category", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="pages")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName='id')
      */
     private $category;
 
