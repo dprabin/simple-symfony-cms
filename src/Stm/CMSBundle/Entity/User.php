@@ -78,7 +78,7 @@ class User implements UserInterface
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = password_hash($password,PASSWORD_BCRYPT);//methodnotfoundexception in php 5.4.10
 
         return $this;
     }
