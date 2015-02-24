@@ -43,6 +43,13 @@ class Category
      */
     private $pages;
 
+    /*
+     * constructor to set our pages property to an array collection to hold multiple pages that belongs to each category
+     */
+    public function __construct(){
+        $this->pages = new ArrayCollegtion();
+    }
+
     /**
      * Get id
      *
