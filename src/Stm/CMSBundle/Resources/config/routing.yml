@@ -14,6 +14,10 @@ stm_cms_homepage:
     path:     /
     defaults: { _controller: StmCMSBundle:Default:index }
 
+stm_cms_page_display:
+    path:     /page/{id}
+    defaults: { _controller: StmCMSBundle:Default:display }
+
 login:
     path: /login
     defaults: { _controller: StmCMSBundle:Security:login }
